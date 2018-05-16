@@ -1,0 +1,17 @@
+<div class="container">
+<h2>
+ {{title}}
+</h2>
+<ul>
+  <li *ngFor = "let course of courses">{{course}}</li>
+</ul>
+<button class="btn btn-primary"[class.btn-danger]="_active" (click)="onActive()">Button</button>
+
+<p>
+  <span (click)= "onActive()" class="glyphicon" [class.glyphicon-star]="_active"  [class.glyphicon-star-empty]="!_active"></span>
+  <span class="glyphicon glyphicon-star-empty">{{active}}</span>
+</p>
+
+<input type="text" id="chatBox" class="chat-box" rows="2" [(ngModel)]="textValue" >
+<p>{{textValue | titlecase }}</p>
+</div>
