@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -10,6 +10,11 @@ import { CoursesComponent } from './courses/courses.component';
 import { CoursesService } from './courses.service';
 import { capitalizePipe } from './capitalize.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { LikeComponent } from './like/like.component';
+import { DirectiveExpComponent } from './directive-exp/directive-exp.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FormAssignmentComponent } from './form-assignment/form-assignment.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,12 +22,18 @@ import { FavoriteComponent } from './favorite/favorite.component';
     ServerElementComponent,
     CoursesComponent,
     capitalizePipe,
-    FavoriteComponent
+    FavoriteComponent,
+    LikeComponent,
+    DirectiveExpComponent,
+    ContactFormComponent,
+    FormAssignmentComponent, 
+    SignupFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
   providers: [
     CoursesService

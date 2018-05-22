@@ -1,0 +1,31 @@
+<p>
+  directive-exp works!
+</p>
+
+<ul class="nav nav-pills">
+  <li [class.active]="viewMode=='map'"><a (click)="viewMode ='map'">Map Veiw</a></li>
+  <li [class.active]="viewMode=='list'"><a (click)="viewMode ='list'">List Veiw</a></li>   
+</ul> 
+<div [ngSwitch] = "viewMode">
+  <div *ngSwitchCase = "'map'" >Map Veiw content</div>
+  <div *ngSwitchCase = "'list'">List Veiw content</div>
+  <div *ngSwitchDefault>OtherWise</div>
+</div>
+
+<button (click)="onAdd()">Add</button>
+<button (click)="loadCourses()">Load Courses</button>
+
+<ul>
+  <li *ngFor="let course of courses; even as isEven; trackBy:trackCourse">
+    {{course.name}}<button (click)= "onRemove(course)">Remove</button><button (click)= "onChange(course)">Change</button>
+  </li>
+</ul>
+
+<span (click)= "onClick()" class="glyphicon"
+      [ngClass]="{'glyphicon-star': isFavorite,
+               'glyphicon-star-empty': !isFavorite}"></span>
+
+<button (click)= "onClick()" 
+        [ngStyle]="{'backgroundColor': isFavorite?'blue':'red'}">Save</button>
+
+

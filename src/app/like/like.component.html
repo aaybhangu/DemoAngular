@@ -1,0 +1,5 @@
+
+<div class="container">
+  <span class="glyphicon glyphicon-heart " [class.heart-Grey]="!isActive"[class.heart-Pink]="isActive" (click)="onLike()"></span>
+  <p>{{likeCount}}</p>
+</div>

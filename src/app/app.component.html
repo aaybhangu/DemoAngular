@@ -1,3 +1,4 @@
+<div class="container">
 <!--<div class="container">
   <app-cockpit
     (serverCreated)="onServerAdded($event)"
@@ -20,7 +21,19 @@
     </div>
   </div>
 </div> 
-<iframe width="560" height="315" src="http://localhost:3000/" frameborder="0" allowfullscreen></iframe>--> 
+<iframe width="560" height="315" src="http://localhost:3000/" frameborder="0" allowfullscreen></iframe>
 
 <app-courses></app-courses>
 <app-favorite [is-favorite]="post.isFavorite" (change) = "OnFavoriteChanged($event)"></app-favorite>
+<like 
+      [isLiked]= "tweet.isLiked"
+      [likeCount]="tweet.likeCount" 
+      (change) = "OnFavoriteChanged($event)"></like>
+
+      <directiveExp></directiveExp>
+      <contact-form></contact-form>> 
+      <form-assignment></form-assignment-->
+        <signup-form></signup-form>
+    </div>
+
+

@@ -8,6 +8,13 @@ import { FavoriteChangedEventObj } from './favorite/favorite.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  tweet ={
+    body:"Here is the body of a Tweet...",
+    isLiked:true,
+    likeCount:10
+    
+  }
   serverElements = [{type: 'server', name: 'Testserver', content: 'Just a test!'}];
   post ={
     title: "Title",
@@ -40,6 +47,7 @@ export class AppComponent {
   OnFavoriteChanged(Obj:FavoriteChangedEventObj){
     console.log("Favorite changed :",Obj);
   }
+
 
 }
 

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class CoursesService {
   
   getCourses(){
-    return ["Course 1 ", "Course 2", "Course3", "Course4"];
+    return ["Course 1 ", "Course 2", "Course3"];
   }
   //constructor() { }
 
