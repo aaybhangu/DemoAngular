@@ -8,12 +8,12 @@ export class UserNameValidators{
     }
   static shouldBeUnique(control:AbstractControl): Promise<ValidationErrors|null>{
       return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            if(control.value==='aay')
+       setTimeout(()=>{
+            if(control.value==='aaa')
                 resolve({shouldBeUnique: true});
-            else    
-            resolve(null);
-           },2000);
+            else 
+                resolve(null);
+         },2000); 
       }); 
   }
 

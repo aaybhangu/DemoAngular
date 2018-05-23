@@ -15,6 +15,7 @@ import { DirectiveExpComponent } from './directive-exp/directive-exp.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormAssignmentComponent } from './form-assignment/form-assignment.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,7 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
     DirectiveExpComponent,
     ContactFormComponent,
     FormAssignmentComponent, 
-    SignupFormComponent
+    SignupFormComponent, NewCourseFormComponent
   ],
   imports: [
     BrowserModule,
