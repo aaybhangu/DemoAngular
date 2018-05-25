@@ -17,6 +17,7 @@ import { FormAssignmentComponent } from './form-assignment/form-assignment.compo
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ChangePassword } from './changePassword/change-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     DirectiveExpComponent,
     ContactFormComponent,
     FormAssignmentComponent, 
-    SignupFormComponent, NewCourseFormComponent, ChangePasswordComponent
+    SignupFormComponent, NewCourseFormComponent, ChangePasswordComponent,ChangePassword
   ],
   imports: [
     BrowserModule,

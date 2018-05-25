@@ -1,6 +1,6 @@
-import { Component, OnInit,group } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup,Validators, FormControl, FormBuilder } from '@angular/forms';
-import { passwordValidators } from './password.validators';
+import { PasswordValidators } from './password.validators';
 
 @Component({
   selector: 'change-password',
@@ -8,19 +8,21 @@ import { passwordValidators } from './password.validators';
   styleUrls: ['./change-password.component.css']
 })
 export class ChangePasswordComponent {
- 
   form:FormGroup;
+
   constructor(fb:FormBuilder){
-    this.form=fb.group({ 
-    oldPassword:['',Validators.required,passwordValidators.matchOldPassword],
+    this.form = fb.group({ 
+    oldPassword:['',
+    Validators.required,
+    PasswordValidators.matchOldPassword
+  ],
       newPassword:['',Validators.required],
       confirmPassword:['',Validators.required]
-    },{validator:passwordValidators.matchNewPassword});
+    },{
+      validator:PasswordValidators.passwordsShouldMatch
+    });
   }
-  _form(required){
-      return this.form.get(required);
-  }
-  new_formGroup(required){
-    return this.form.get(''+required);
-  }
+  get oldPassword(){ return this.form.get('oldPassword');}
+  get newPassword(){ return this.form.get('newPassword');}
+  get confirmPassword(){ return this.form.get('confirmPassword');}
 }

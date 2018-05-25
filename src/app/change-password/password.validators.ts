@@ -1,8 +1,7 @@
-import { AbstractControl, ValidationErrors } from "@angular/forms";
-import { ChangePasswordComponent } from "./change-password.component";
+import { AbstractControl, ValidationErrors } from "@angular/forms"; 
 
 
-export class passwordValidators{
+export class PasswordValidators{
   static matchOldPassword(control:AbstractControl): Promise<ValidationErrors|null>{
       return new Promise((resolve,reject)=>{
       setTimeout(()=>{
@@ -12,11 +11,24 @@ export class passwordValidators{
       },2000);    
       });
   }
-  static matchNewPassword(control:AbstractControl):ValidationErrors|null{ 
+  /*
+  static matchNewPassword(control:AbstractControl){ 
      let newPassword = control.get('newPassword');
      let confirmPassword = control.get('confirmPassword');
-      if(newPassword != confirmPassword)
-        return{invaildPassword:true};
+     
+      if(newPassword.value !== confirmPassword.value)
+        return{matchNewPassword:true};
+        
       return null;
-  }
+  }*/
+
+  static passwordsShouldMatch(control: AbstractControl) {
+    let newPassword = control.get('newPassword');
+    let confirmPassword = control.get('confirmPassword');
+
+    if (newPassword.value !== confirmPassword.value)
+        return { passwordsShouldMatch: true };
+    
+    return null;
+}
 }
